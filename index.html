@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Website</title>
+    <title>My Notes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            font-size: 18px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello world! 👋</h1>
-    <p>This is my website.</p>
+
+    <h1>My Notes 📝</h1>
+
+    <textarea id="notes" placeholder="Type something here..."></textarea>
+
+    <script>
+        const notes = document.getElementById("notes");
+
+        // Load previously saved text
+        notes.value = localStorage.getItem("myNotes") || "";
+
+        // Save whenever the text changes
+        notes.addEventListener("input", () => {
+            localStorage.setItem("myNotes", notes.value);
+        });
+    </script>
+
 </body>
 </html>
