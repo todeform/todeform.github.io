@@ -3,6 +3,7 @@ body {
     max-width: 700px;
     margin: 50px auto;
     padding: 20px;
+    background-color: #10112b;
 }
 
 textarea {
