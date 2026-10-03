@@ -1,9 +1,23 @@
-const notes = document.getElementById("notes");
+const table = document.getElementById("table");
 
-// Load saved text
-notes.value = localStorage.getItem("myNotes") || "";
+for (let row = 0; row < 10; row++) {
 
-// Save text whenever it changes
-notes.addEventListener("input", () => {
-    localStorage.setItem("myNotes", notes.value);
-});
+    const tr = document.createElement("tr");
+
+    for (let col = 0; col < 5; col++) {
+
+        const td = document.createElement("td");
+        const textarea = document.createElement("textarea");
+        textarea.spellcheck = false;
+
+        textarea.addEventListener("input", () => {
+            textarea.style.height = "30px";
+            textarea.style.height = textarea.scrollHeight + "px";
+        });
+
+        td.appendChild(textarea);
+        tr.appendChild(td);
+    }
+
+    table.appendChild(tr);
+}
