@@ -14,11 +14,11 @@ body {
 h1 {
     color: #F1F0FF;
     font-weight: normal;
-    font-size: clamp(20px, 25px, 30px);
+    font-size: clamp(1rem, 2vw + 1rem, 3rem);
 }
 table {
-    width: 50vw;
-    height: 90vw;
+    width: 40vh;
+    height: 70vh;
     border-collapse: separate;
     border-spacing: 0;
     border: 1px solid #252763;
@@ -43,7 +43,7 @@ textarea {
     border-radius: 4px;
     border-width: 2px;
     color: #e9e9ef;
-    font-size: clamp(10px, 15px, 30px);
+    font-size: clamp(0.5rem, vw + 0.5rem, 1.5rem);
     line-height: 12px;
     border: none;
     overflow: hidden;
