@@ -8,6 +8,7 @@ for (let row = 0; row < 10; row++) {
 
         const td = document.createElement("td");
         const textarea = document.createElement("textarea");
+
         textarea.spellcheck = false;
 
         textarea.addEventListener("input", () => {
