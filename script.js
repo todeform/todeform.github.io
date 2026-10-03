@@ -1,6 +1,6 @@
 const table = document.getElementById("table");
 
-for (let row = 0; row < 10; row++) {
+for (let row = 0; row < 20; row++) {
 
     const tr = document.createElement("tr");
 
@@ -12,7 +12,7 @@ for (let row = 0; row < 10; row++) {
         textarea.spellcheck = false;
 
         textarea.addEventListener("input", () => {
-            textarea.style.height = "30px";
+            textarea.style.height = "20px";
             textarea.style.height = textarea.scrollHeight + "px";
         });
 
