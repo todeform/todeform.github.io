@@ -13,8 +13,12 @@ body {
 
 h1 {
     color: #F1F0FF;
+    font-weight: normal;
+    font-size: 6vw
 }
 table {
+    width: 50vw;
+    height: 60vh;
     border-collapse: separate;
     border-spacing: 0;
     border: 1px solid #252763;
@@ -39,7 +43,7 @@ textarea {
     border-radius: 4px;
     border-width: 2px;
     color: #e9e9ef;
-    font-size: 10px;
+    font-size: 2.5vw;
     line-height: 12px;
     border: none;
     overflow: hidden;
