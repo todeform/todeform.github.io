@@ -8,41 +8,6 @@ body {
     box-sizing: border-box;
 }
 
-h1 {
-    color: #F1F0FF;
-    font-weight: normal;
-    font-size: 40px;
-}
-table {
-    border-collapse: separate;
-    border-spacing: 0;
-    border: 1px solid #252763;
-    overflow: hidden;
-}
-td {
-    padding: 0;
-    border: 1px solid #252763;
-    vertical-align: top;
-}
-textarea {
-    display: block;
-    margin: 0;
-    resize: none;
-    width: 80px;
-    height: 20px;
-    padding: 2px;
-    box-sizing: border-box;
-    background-color: #10112b;
-    border-color: #252763;
-    border-radius: 4px;
-    border-width: 2px;
-    color: #e9e9ef;
-    font-size: clamp(0.5rem, vw + 0.5rem, 1.5rem);
-    line-height: 12px;
-    border: none;
-    overflow: hidden;
-}
-
 textarea:focus {
     outline: none;
 }
@@ -63,3 +28,183 @@ textarea:focus {
 ::-webkit-scrollbar-thumb:hover {
     background: #3e4066;
 }
+
+    .panel {
+        width: fit-content;
+        min-width: 800px;
+        border: none;
+        border-radius: 12px;
+        overflow: visible;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+    }
+
+    /* Header */
+    .panel-header {
+        padding: 10px 14px;
+        background: #10112b;
+        font-weight: bold;
+        border: 2px solid #272840;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    /* Table */
+    .table {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table:not(:has(.row)) + .panel-footer {
+        border-top: none;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+
+        min-height: 32px;
+        padding: 0 20px;
+        box-sizing: border-box;
+
+        border-left: 2px solid #272840;
+        border-right: 2px solid #272840;
+    }
+
+    .color-picker {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .circle {
+        width: 18px;
+        height: 18px;
+        min-width: 18px;
+        min-height: 18px;
+        flex: 0 0 18px;
+
+        border-radius: 50%;
+        background: #272840;
+        border: none;
+        padding: 0;
+        margin-right: 24px;
+        box-sizing: border-box;
+    }
+
+    .color-menu {
+        display: none;
+        position: absolute;
+        left: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        flex-direction: column;
+        gap: 3px;
+
+        padding: 5px;
+
+        background: #10112b;
+        border: 2px solid #272840;
+        border-radius: 8px;
+    }
+
+    .color-menu.show {
+        display: flex;
+    }
+
+    .color-option {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        width: 112px !important;
+        height: 26px !important;
+
+        padding: 4px 7px;
+
+        background: #10112b;
+        border: none !important;
+        border-radius: 5px;
+
+        color: #F1F0FF;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .color-option:hover {
+        background: #292b55;
+    }
+
+    .color-dot {
+        width: 18px;
+        height: 18px;
+
+        flex: 0 0 18px;
+
+        border-radius: 50%;
+    }
+
+    .link {
+        width: 11ch;
+        margin-right: 24px;
+    }
+
+    .row > :nth-child(3) {
+        width: 3ch;
+        margin-right: 24px;
+    }
+
+    .row > :nth-child(4) {
+        width: 20ch;
+        margin-right: 24px;
+    }
+
+    .row > :nth-child(5) {
+        width: 25ch;
+    }
+
+    /* Digit-width text */
+    .digit-text {
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .link {
+        color: #F1F0FF;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .row:not(:last-child) {
+        border-bottom: 2px solid #272840;
+    }
+
+    /* Bottom controls */
+    .panel-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        padding: 8px 12px;
+        background: #10112b;
+        border: 2px solid #272840;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+    button {
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        color: #F1F0FF;
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+        cursor: pointer;
+        background-color: #10112b;
+        border: 2px solid #272840;
+        border-radius: 2px;
+    }
