@@ -95,7 +95,7 @@ onAuthStateChanged(auth, user => {
   loginBtn.hidden = isOwner;
   logoutBtn.hidden = !isOwner;
   emailInput.hidden = isOwner;
-  passwordInput.hidden = !isOwner;
+  passwordInput.hidden = isOwner;
 
   authStatus.textContent = isOwner
     ? "You are good"
